@@ -1,0 +1,235 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#notPdfPage{
+  display: none;
+}
+#goalPage{
+  display: none;
+}
+
+
+#top {
+  background-color: #1a1a2e;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+#icon{
+  height: 30px;
+  width: 30px;
+  background-color:rgb(77, 77, 221);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+#icon{
+  font-size: 15px;
+}
+#name{
+  color:azure;
+  font-size: 15px;
+
+}
+#statusPill{
+background-color:#262641 ;
+height:30px;
+width: 80px;
+gap: 8px;
+border: 2px solid black;
+display:flex;
+align-items:center;
+justify-content: center;
+border-radius: 20px;
+padding: 10px;
+margin-left:70px;
+}
+#statusDot{
+  height:7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: azure;
+}
+#inactive{
+  color:azure;
+}
+#speed{
+  padding: 12px 10px 3px 10px;
+  font-size: 13px;
+}
+#scroll{
+  width:210px;
+  margin: 0px 10px 0px 10px;
+}
+#count{
+  border-radius: 15px;
+  width:fit-content;
+  padding: 5px;
+  margin: 0 auto;
+  background-color: rgb(222, 222, 235);
+  color:blue;
+}
+#scrollSys{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:10px;
+}
+.toggle{
+ display:inline-block;
+  height: 20px;
+  width: 35px;
+  background-color: rgba(0, 0, 0, 0.219);
+ border-radius: 10px;
+ cursor: pointer;
+ padding: 2px;
+transition: 0.2s;
+
+}
+#toggle1{
+  margin-left: 135px;
+}
+#toggle2{
+  margin-left: 84px;
+}
+#toggle3{
+  margin-left: 104px;
+}
+.toggle input{
+  display: none;
+}
+.slider{
+  display:inline-block;
+  height: 16px;
+  width:16px;
+  border-radius:50%;
+  background-color: azure;
+  transition: 0.3s;
+}
+.toggle input:checked + .slider{
+  transform: translateX(15px);
+}
+.toggle:has(input:checked){
+  background-color: rgba(35, 35, 228, 0.685);
+}
+#options{
+  padding:12px;
+}
+#op1{
+  display:flex;
+  align-items: center;
+  gap:8px;
+  margin-top:12px;
+}
+.progress{
+  display:flex;
+  align-items: center;
+  margin: 18px 0px 5px;
+  gap:200px;
+}
+.unfilled{
+  height:5px;
+  width:290px;
+  background-color: rgba(0, 0, 0, 0.219);
+}
+.filled{
+  height: 5px;
+  width:0px;
+  background-color: rgba(35, 35, 228, 0.685);
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px ;
+  gap:10px;
+}
+.start{
+  position: relative;
+  height:55px;
+  width:160px;
+  background-color: rgb(5, 5, 36);
+  color:azure;
+border-radius: 10px;
+cursor: pointer;
+}
+.startIcon{
+  position: absolute;
+  top: 12px;
+  left:35px;
+  font-size: 18px;
+  
+}
+.pause{
+  position: absolute;
+  top: 12px;
+  left:35px;
+   font-size: 18px;
+   display: none;
+}
+.startText{
+  position: absolute;
+  top: 19px;
+  left:55px;
+}
+.goal{
+  height: 55px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(5, 5, 36);
+  color:azure;
+  gap:3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.stop{
+  height: 55px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(5, 5, 36);
+  color:azure;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#reloadIcon{
+  font-size: 30px;
+}
+
+.setting{
+  padding: 15px;
+}
+.radio{
+  margin-bottom: 10px;
+}
+.done{
+  height: 40px;
+  width: 100px;
+  margin: 30px 0px 0px 190px;  
+  background-color: rgb(5, 5, 36);
+  color: azure;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.inputs{
+  padding-left: 5px;
+}
+#error{
+  margin: 40px;
+  font-size: large;
+  text-align: center;
+}
+#uploadPdf{
+  margin-top: 30px;
+}
+#pageNumber{
+  margin-top: 30px;
+}

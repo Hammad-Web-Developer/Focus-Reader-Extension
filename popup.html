@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>Focus Reader Extension</title>
+</head>
+<body>
+  <style>
+    body{
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+  </style>
+  <div id="mainPage">
+  <div id="top">
+    <div id="icon">
+      <span id="Icon">📖</span></div>
+    <span id="name">Focus Reader</span>
+    <div id="statusPill">
+      <div id="statusDot"></div>
+      <span id="inactive">Inactive</span>
+    </div>
+  </div>
+  <div id="speed">
+    <span id="speedTag">READING SPEED</span>
+    <br/>
+    <div id="scrollSys">
+    <span>SLOW</span>
+    <input type="range" id="scroll" min="1" max="10" value="3">
+    <span>FAST</span>
+    </div>
+    <br/>
+    <div id="count">
+      <span>3 words/sec</span>
+    </div>
+  </div>
+  <div id="options">
+    <span>OPTIONS</span>
+    <div id="op1">
+      <span id="blurIcon">🫧</span>
+      <span>Blur Surroundings</span>
+      <label id="toggle1" class="toggle">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div id="op1">
+      <span id="blurIcon">📚</span>
+      <span>Word definitions on hover</span>
+      <label id="toggle2" class="toggle">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+        <div id="op1">
+      <span id="blurIcon">📝</span>
+      <span>Generate bullet points</span>
+      <label id="toggle3" class="toggle">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="progress">
+      <span>PROGRESS</span>
+      <span class="percent">0 %</span>
+      </div>
+      <div class="unfilled">
+        <div class="filled">
+        </div>
+      </div>
+    
+      <div class="bottom">
+        <button class="start">
+          
+          <span class="startIcon">⏵</span>
+          <span class="pause">⏸</span>
+          
+          <span class="startText">START</span>
+        </button>
+
+        <button class="goal">
+          <span class="goalIcon">🎯</span>
+          <span>SET GOAL</span>
+        </button>
+
+        <button class="stop">
+          <span id="reloadIcon">✕</span>
+        </button>
+
+      </div>
+    
+    </div>
+</div>
+
+<div id="goalPage">
+
+  <div id="top">
+    <div id="icon">
+      <span id="Icon">📖</span></div>
+    <span id="name">Focus Reader</span>
+  </div>
+  <div class="setting">
+    <span>SET GOAL</span>
+    <br/>
+    <br/>
+    <label >
+      <input type="radio" class="radio" name="goalType" value="pages">
+      Set Number of Pages/Lines
+    </label>
+      <input type="number" id="pages" class="inputs" min="1">
+      <select id="pagesORlines">
+        <option value="pages">Pages</option>
+        <option value="lines">Lines</option>
+      </select>
+      <br/><br/>
+          <label >
+      <input type="radio" class="radio" name="goalType" value="timer">
+      Set Timer
+    </label>
+    <br/>
+      <input type="number" id="timer" class="inputs" min="1">
+      <select id="timeType">
+        <option value="hours">Hours</option>
+        <option value="mins">Minutes</option>
+        <option value="secs">Seconds</option>
+      </select>
+       
+      <input type="number" id="pageNumber" min="1" placeholder="Enter page number!" required>
+        <input type="file" id="uploadPdf" accept=".pdf">
+      
+      <button class="done">
+        <span>DONE</span>
+      </button>
+    
+  </div>
+</div>
+
+<div id="notPdfPage">
+
+  <div id="top">
+    <div id="icon">
+      <span id="Icon">📖</span></div>
+    <span id="name">Focus Reader</span>
+  </div>
+  <div id="error">
+    <span>Open a Pdf in broswer, set a reading goal and START reading</span>
+  </div>
+
+</div>
+
+
+<script type="module" src="popup.js"></script>
+  
+</body>
+</html>
